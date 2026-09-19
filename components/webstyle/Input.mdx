@@ -1,0 +1,116 @@
+import { Canvas, Meta, Title } from '@storybook/addon-docs/blocks';
+import * as InputStories from './Input.stories';
+
+<Meta title="WebStyle-EXAMPLE/Input/Docs-Manual" />
+
+<Title>Input</Title>
+
+Forms are used to collect user input. The ANU Web Style Guide provides three form themes, each offering consistent, accessible styling for input fields.
+
+<p className="msg-warn"><strong>Please note:</strong> Form styling is applied via classes on the `<form>` tag and requires `<fieldset>` elements. You must also add the `text` class to text inputs.</p>
+<br/>
+
+
+
+
+## **Form themes**
+
+Three form themes are available. Apply the class directly to your `<form>` tag:
+
+- `anuform` — default style (light background, outlined fieldsets)
+- `anuform-inline-tint` — tinted/light-grey inline style
+- `anuform-inline-black` — dark/black inline style
+
+**`.anuform` (default):**
+<Canvas sourceState="none" withToolbar="true" of={InputStories.DefaultTheme} />
+
+**`.anuform-inline-tint`:**
+<Canvas sourceState="none" withToolbar="true" of={InputStories.InlineTintTheme} />
+
+**`.anuform-inline-black`:**
+<Canvas sourceState="none" withToolbar="true" of={InputStories.InlineBlackTheme} />
+
+<br/>
+
+
+## **Fieldsets**
+
+Fieldsets divide a form into logical sections. Each `<fieldset>` can have an optional `<legend>` that acts as a section heading — the form styling automatically matches it to the heading colours on the rest of your site.
+
+```html
+<fieldset>
+  <legend>First heading</legend>
+  <!-- inputs … -->
+</fieldset>
+```
+
+**Fieldset with `<legend>` heading:**
+<Canvas sourceState="none" withToolbar="true" of={InputStories.WithLegend} />
+
+**Fieldset without a legend:**
+<Canvas sourceState="none" withToolbar="true" of={InputStories.WithoutLegend} />
+
+<br/>
+
+## **Labels**
+
+Each input field should have a `<label>` bound to it via matching `for` / `id` attributes. This improves screen-reader accessibility and usability (clicking the label focuses the input).
+
+The default label width is **20%** of the form area on larger screens and **100%** on smaller screens. You can widen labels by appending a class to the `<form>` tag:
+
+- `labelwide` — 40% label width on larger screens
+- `labelfull` — 100% label width on larger screens
+
+**Default label width:**
+<Canvas sourceState="none" withToolbar="true" of={InputStories.LabelDefault} />
+
+**`labelwide` — 40% label width:**
+<Canvas sourceState="none" withToolbar="true" of={InputStories.LabelWide} />
+
+**`labelfull` — 100% label width:**
+<Canvas sourceState="none" withToolbar="true" of={InputStories.LabelFull} />
+
+<br/>
+
+
+## **Required fields**
+
+For mandatory fields, use **both** of the following together:
+
+- Add `class="req"` to the `<label>` — renders a red asterisk (falls back to "(required)" when JavaScript is off).
+- Add `required` and `aria-required="true"` to the `<input>` — enforces HTML5 validation and provides assistive-technology support.
+
+**Required field example:**
+<Canvas sourceState="none" withToolbar="true" of={InputStories.RequiredField} />
+
+<br/>
+
+
+## **Input hints (placeholder)**
+
+Use the `placeholder` attribute to display hint text inside the input. The hint clears automatically when the user starts typing.
+
+**With placeholder:**
+<Canvas sourceState="none" withToolbar="true" of={InputStories.WithPlaceholder} />
+
+<br/>
+
+
+## **Instruction text**
+
+Add instructional text below an input using a `<p class="instruction">` element inside the field's `<span>` wrapper.
+
+**With instruction text:**
+<Canvas sourceState="none" withToolbar="true" of={InputStories.WithInstruction} />
+
+<br/>
+
+
+## **Shorter fields**
+
+<p className="msg-warn"><strong>Please note:</strong> Shorter fields are only available with <code>anuform-inline-tint</code> and <code>anuform-inline-black</code> themes.</p>
+
+When you don't need an input to span the full row, add a width class (e.g. `w45`) to the `.field` wrapper `<div>`.
+
+**Short field with `w45` (`.anuform-inline-black`):**
+<Canvas sourceState="none" withToolbar="true" of={InputStories.ShortField} />
