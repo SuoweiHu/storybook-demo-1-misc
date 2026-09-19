@@ -1,6 +1,7 @@
 import { Canvas, Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+import * as MessageStories from './Message.stories';
 
-<Meta title="WebStyle-EXAMPLE/Example-WebStyle"/>
+<Meta title="WebStyle-EXAMPLE/Message/Docs-Manual"/>
 
 
 <Title>Message</Title>
@@ -11,27 +12,27 @@ We support a number of different message styles. For proper styling, please use 
 <br/>
 
 
-## Available classes
+## **Available classes**
 
 **Error message:**
-<p className="msg-error">&lt;p class="msg-error"&gt; ... &lt;/p&gt;</p>
+<Canvas sourceState="none" withToolbar="true" of={MessageStories.ErrorMessage} />
 
 **Warning message:**
-<p className="msg-warn">&lt;p class="msg-warn"&gt; ... &lt;/p&gt;</p>
+<Canvas sourceState="none" withToolbar="true" of={MessageStories.WarningMessage} />
 
 **Information message:**
-<p className="msg-info">&lt;p class="msg-info"&gt; ... &lt;/p&gt;</p>
+<Canvas sourceState="none" withToolbar="true" of={MessageStories.InformationMessage} />
 
 **Success message:**
-<p className="msg-success">&lt;p class="msg-success"&gt; ... &lt;/p&gt;</p>
+<Canvas sourceState="none" withToolbar="true" of={MessageStories.SuccessMessage} />
 
 **Inline message:**
-<p className="msg-inline">&lt;p class="msg-inline"&gt; ... &lt;/p&gt;</p>
+<Canvas sourceState="none" withToolbar="true" of={MessageStories.InlineMessage} />
 
 <br/>
 
 
-## Customisation
+## **Customisation**
 
 **Font size & Colours**
 
@@ -40,14 +41,14 @@ As the error messages are written inside tag `<p>`, you are able to combine diff
 <p className="msg-warn"><strong>Please note:</strong> Gold and white font colour are prohibited on any message styles because those combinations are not fully accessible. Please view the [Accessibility](https://webpublishing.anu.edu.au/web-style-guide/accessibility) section for a full set of approved colour combinations.</p>
 
 **Example 1: `<p class="msg-error large">`**
-<p className="msg-error large">This is a larger error message. Note that please don't use gold or white text on any message, because the combinations, will not pass WCAG 2.1.</p>
+<Canvas sourceState="none" withToolbar="true" of={MessageStories.CustomFontAndColor} />
 
 **Example 2: `<p class="msg-info text-unigrey">`**
-<p className="msg-info text-unigrey">This is a normal-size error message with dark grey text.</p>
+<Canvas sourceState="none" withToolbar="true" of={MessageStories.CustomColor} />
 
 **Width**
 
 You can also add width class, such as `w50`, `w60`, `w80` to change the width of the message. For more available classes, please view the [Width](https://webpublishing.anu.edu.au/web-style-guide/width) section.
 
 **Example 3: `<p class="msg-info w80">`**
-<p className="msg-info w80">This is a message with class `w80`, which makes the width of this message will always be 80% wide of its parent container.</p>
+<Canvas sourceState="none" withToolbar="true" of={MessageStories.CustomWidth} />
