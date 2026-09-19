@@ -1,4 +1,10 @@
 import { Button } from "@/components/ui/button";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
 import Image from "next/image";
 
 export default function Home() {
@@ -13,7 +19,6 @@ export default function Home() {
           height={20}
           priority
         />
-        <Button variant="default">Hello World</Button>
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             To get started, edit the{" "}
@@ -64,6 +69,39 @@ export default function Home() {
           >
             Documentation
           </a>
+        </div>
+        <hr className="border-2 w-full"></hr>
+        <div>
+            <h2 className="mb-10">⬇️Test Components Below ⬇️</h2>
+            <div className="flex flex-row gap-4">
+                <Button variant="default">Hello World</Button>
+                <Button variant="destructive">Hello World</Button>
+                <Button variant="secondary">Hello World</Button>
+            </div>
+            <div>
+                <Accordion className="w-100">
+                    <AccordionItem value="item-1">
+                        <AccordionTrigger>What is Storybook?</AccordionTrigger>
+                        <AccordionContent>
+                            Storybook is a tool for building and documenting UI components
+                            in isolation.
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-2">
+                        <AccordionTrigger>Why use an accordion?</AccordionTrigger>
+                        <AccordionContent>
+                            Accordions organize related content into collapsible sections.
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-3">
+                        <AccordionTrigger>Can I customize it?</AccordionTrigger>
+                        <AccordionContent>
+                            Yes. Pass a className or other supported props to customize the
+                            accordion and its items.
+                        </AccordionContent>
+                    </AccordionItem>
+                </Accordion>
+            </div>
         </div>
       </main>
     </div>
