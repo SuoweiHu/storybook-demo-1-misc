@@ -1,0 +1,55 @@
+import { Canvas, Meta, Title, Subtitle } from '@storybook/addon-docs/blocks';
+import './src/styles/css/export.css';     // Remember to re-build CSS using `npm run build-webstyle-src` after any changes to the source files
+import  './src/styles/js/dist/export.js'; // Remember to comment-out './btn-back-to-top' and  './pagetab' in 'main.js' before running `npm run build-webstyle-src`
+
+<Meta title="WebStyle-EXAMPLE/Example-WebStyle"/>
+
+
+<Title>Message</Title>
+
+We support a number of different message styles. For proper styling, please use one of the six classes that we provided. They can be applied to elements such as `p` and `div`.
+
+<p className="msg-warn"><strong>Please note:</strong> each message style has its corresponding colour and icon, which cannot be changed.</p>
+<br/>
+
+
+## Available classes
+
+**Error message:**
+<p className="msg-error">&lt;p class="msg-error"&gt; ... &lt;/p&gt;</p>
+
+**Warning message:**
+<p className="msg-warn">&lt;p class="msg-warn"&gt; ... &lt;/p&gt;</p>
+
+**Information message:**
+<p className="msg-info">&lt;p class="msg-info"&gt; ... &lt;/p&gt;</p>
+
+**Success message:**
+<p className="msg-success">&lt;p class="msg-success"&gt; ... &lt;/p&gt;</p>
+
+**Inline message:**
+<p className="msg-inline">&lt;p class="msg-inline"&gt; ... &lt;/p&gt;</p>
+
+<br/>
+
+
+## Customisation
+
+**Font size & Colours**
+
+As the error messages are written inside tag `<p>`, you are able to combine different styles with it. For example, by adding `class="large"` to the `<p>`, you can make the message in larger font; by adding `class="text-unigrey"` you can change the font colour to dark grey. Please refer to the [Text](https://webpublishing.anu.edu.au/web-style-guide/text) documentation for all the available styles.
+
+<p className="msg-warn"><strong>Please note:</strong> Gold and white font colour are prohibited on any message styles because those combinations are not fully accessible. Please view the [Accessibility](https://webpublishing.anu.edu.au/web-style-guide/accessibility) section for a full set of approved colour combinations.</p>
+
+**Example 1: `<p class="msg-error large">`**
+<p className="msg-error large">This is a larger error message. Note that please don't use gold or white text on any message, because the combinations, will not pass WCAG 2.1.</p>
+
+**Example 2: `<p class="msg-info text-unigrey">`**
+<p className="msg-info text-unigrey">This is a normal-size error message with dark grey text.</p>
+
+**Width**
+
+You can also add width class, such as `w50`, `w60`, `w80` to change the width of the message. For more available classes, please view the [Width](https://webpublishing.anu.edu.au/web-style-guide/width) section.
+
+**Example 3: `<p class="msg-info w80">`**
+<p className="msg-info w80">This is a message with class `w80`, which makes the width of this message will always be 80% wide of its parent container.</p>

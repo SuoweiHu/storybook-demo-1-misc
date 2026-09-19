@@ -1,0 +1,3 @@
+[submodule "components/webstyle/src"]
+	path = components/webstyle/src
+	url = git@github.com:anu-its/sew-websites-webstyle.git
