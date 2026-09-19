@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
     Accordion,
@@ -5,7 +6,6 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -18,51 +18,51 @@ import {
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="storybook:bg-red-200! storybook:py-5 storybook:flex storybook:flex-col storybook:flex-1 storybook:items-center storybook:justify-center storybook:bg-zinc-50 storybook:font-sans storybook:dark:bg-black">
+      <main className="storybook:flex storybook:flex-1 storybook:w-full storybook:max-w-3xl storybook:flex-col storybook:items-center storybook:justify-between storybook:py-32 storybook:px-16 storybook:bg-white storybook:dark:bg-black storybook:sm:items-start">
         <Image
-          className="dark:invert h-5 w-[100px]"
+          className="storybook:dark:invert storybook:h-5 storybook:w-[100px]"
           src="/next.svg"
           alt="Next.js logo"
           width={100}
           height={20}
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+        <div className="storybook:flex storybook:flex-col storybook:items-center storybook:gap-6 storybook:text-center storybook:sm:items-start storybook:sm:text-left">
+          <h1 className="storybook:max-w-xs storybook:text-3xl storybook:font-semibold storybook:leading-10 storybook:tracking-tight storybook:text-black storybook:dark:text-zinc-50">
             To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
+            <code className="storybook:rounded storybook:bg-black/[.06] storybook:px-1.5 storybook:py-0.5 storybook:font-mono storybook:text-[0.9em] storybook:dark:bg-white/[.08]">
               page.tsx
             </code>{" "}
             file.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+          <p className="storybook:max-w-md storybook:text-lg storybook:leading-8 storybook:text-zinc-600 storybook:dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}
             <a
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              className="storybook:font-medium storybook:text-zinc-950 storybook:dark:text-zinc-50"
             >
               Templates
             </a>{" "}
             or the{" "}
             <a
               href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              className="storybook:font-medium storybook:text-zinc-950 storybook:dark:text-zinc-50"
             >
               Learning
             </a>{" "}
             center.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+        <div className="storybook:flex storybook:flex-col storybook:gap-4 storybook:text-base storybook:font-medium storybook:sm:flex-row">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
+            className="storybook:flex storybook:h-12 storybook:w-full storybook:items-center storybook:justify-center storybook:gap-2 storybook:rounded-full storybook:bg-foreground storybook:px-5 storybook:text-background storybook:transition-colors storybook:hover:bg-[#383838] storybook:dark:hover:bg-[#ccc] storybook:md:w-[158px]"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image
-              className="dark:invert h-[14px] w-4"
+              className="storybook:dark:invert storybook:h-[14px] storybook:w-4"
               src="/vercel.svg"
               alt="Vercel logomark"
               width={16}
@@ -71,7 +71,7 @@ export default function Home() {
             Deploy Now
           </a>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
+            className="storybook:flex storybook:h-12 storybook:w-full storybook:items-center storybook:justify-center storybook:rounded-full storybook:border storybook:border-solid storybook:border-black/[.08] storybook:px-5 storybook:transition-colors storybook:hover:border-transparent storybook:hover:bg-black/[.04] storybook:dark:border-white/[.145] storybook:dark:hover:bg-[#1a1a1a] storybook:md:w-[158px]"
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
@@ -79,18 +79,18 @@ export default function Home() {
             Documentation
           </a>
         </div>
-        <hr className="border-2 w-full"></hr>
-        <div className="my-10">
-            <h2 className="mb-10">⬇️Test Components Below ⬇️</h2>
-            <div className="my10 ">
-                <div className="flex flex-row gap-4">
+        <hr className="storybook:border-2 storybook:w-full storybook:mt-10 storybook:mb-0"></hr>
+        <div className="storybook:my-10">
+            <h2 className="storybook:mb-10">⬇️Test Components Below ⬇️</h2>
+            <div className="storybook:my10">
+                <div className="storybook:flex storybook:flex-row storybook:gap-4">
                     <Button variant="default">Hello World</Button>
                     <Button variant="destructive">Hello World</Button>
                     <Button variant="secondary">Hello World</Button>
                 </div>
             </div>
-            <div className="my-10">
-                <Accordion className="w-100" defaultValue={["item-1"]}>
+            <div className="storybook:my-10">
+                <Accordion className="storybook:w-100" defaultValue={["item-1"]}>
                     <AccordionItem value="item-1">
                         <AccordionTrigger>What is Storybook?</AccordionTrigger>
                         <AccordionContent>
@@ -113,8 +113,8 @@ export default function Home() {
                     </AccordionItem>
                 </Accordion>
             </div>
-            <div className="my-10">
-                 <Card className="mx-auto w-full max-w-sm">
+            <div className="storybook:my-10">
+                 <Card className="storybook:mx-auto storybook:w-full storybook:max-w-sm">
                     <CardHeader>
                         <CardTitle>
                             Terms of Service
@@ -123,8 +123,8 @@ export default function Home() {
                             Review the terms before accepting the agreement.
                         </CardDescription>
                     </CardHeader>
-                    <CardContent className="-mb-(--card-spacing)">
-                        <div className="-mx-(--card-spacing) max-h-48 space-y-4 overflow-y-scroll border-t bg-muted/50 px-(--card-spacing) py-4 text-sm leading-relaxed">
+                    <CardContent className="storybook:-mb-(--card-spacing)">
+                        <div className="storybook:-mx-(--card-spacing) storybook:max-h-48 storybook:space-y-4 storybook:overflow-y-scroll storybook:border-t storybook:bg-muted/50 storybook:px-(--card-spacing) storybook:py-4 storybook:text-sm storybook:leading-relaxed">
                         <p>
                             These terms govern your use of the workspace, including access to
                             shared documents, project files, and collaboration tools.
@@ -144,7 +144,7 @@ export default function Home() {
                         </p>
                         </div>
                     </CardContent>
-                    <CardFooter className="justify-end gap-2">
+                    <CardFooter className="storybook:justify-end storybook:gap-2">
                         <Button variant="outline">Decline</Button>
                         <Button>Accept</Button>
                     </CardFooter>
