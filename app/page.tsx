@@ -6,6 +6,15 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
 
 export default function Home() {
   return (
@@ -71,15 +80,17 @@ export default function Home() {
           </a>
         </div>
         <hr className="border-2 w-full"></hr>
-        <div>
+        <div className="my-10">
             <h2 className="mb-10">⬇️Test Components Below ⬇️</h2>
-            <div className="flex flex-row gap-4">
-                <Button variant="default">Hello World</Button>
-                <Button variant="destructive">Hello World</Button>
-                <Button variant="secondary">Hello World</Button>
+            <div className="my10 ">
+                <div className="flex flex-row gap-4">
+                    <Button variant="default">Hello World</Button>
+                    <Button variant="destructive">Hello World</Button>
+                    <Button variant="secondary">Hello World</Button>
+                </div>
             </div>
-            <div>
-                <Accordion className="w-100">
+            <div className="my-10">
+                <Accordion className="w-100" defaultValue={["item-1"]}>
                     <AccordionItem value="item-1">
                         <AccordionTrigger>What is Storybook?</AccordionTrigger>
                         <AccordionContent>
@@ -101,6 +112,43 @@ export default function Home() {
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>
+            </div>
+            <div className="my-10">
+                 <Card className="mx-auto w-full max-w-sm">
+                    <CardHeader>
+                        <CardTitle>
+                            Terms of Service
+                            </CardTitle>
+                        <CardDescription>
+                            Review the terms before accepting the agreement.
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent className="-mb-(--card-spacing)">
+                        <div className="-mx-(--card-spacing) max-h-48 space-y-4 overflow-y-scroll border-t bg-muted/50 px-(--card-spacing) py-4 text-sm leading-relaxed">
+                        <p>
+                            These terms govern your use of the workspace, including access to
+                            shared documents, project files, and collaboration tools.
+                        </p>
+                        <p>
+                            You are responsible for the content you upload and for ensuring that
+                            your team has the appropriate permissions to view or edit it.
+                        </p>
+                        <p>
+                            We may update features or limits as the service evolves. When those
+                            changes materially affect your workflow, we will notify your
+                            workspace administrators.
+                        </p>
+                        <p>
+                            By continuing, you agree to keep your account credentials secure and
+                            to follow your organization&apos;s acceptable use policies.
+                        </p>
+                        </div>
+                    </CardContent>
+                    <CardFooter className="justify-end gap-2">
+                        <Button variant="outline">Decline</Button>
+                        <Button>Accept</Button>
+                    </CardFooter>
+                    </Card>
             </div>
         </div>
       </main>
