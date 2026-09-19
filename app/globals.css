@@ -1,4 +1,4 @@
-@import "tailwindcss" prefix(storybook);
+@import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -117,12 +117,12 @@
 
 @layer base {
   * {
-    @apply storybook:border-border storybook:outline-ring/50;
+    @apply border-border outline-ring/50;
   }
   body {
-    @apply storybook:bg-background storybook:text-foreground;
+    @apply bg-background text-foreground;
   }
   html {
-    @apply storybook:font-sans storybook:antialiased;
+    @apply font-sans antialiased;
   }
 }
