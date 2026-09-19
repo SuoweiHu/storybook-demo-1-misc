@@ -4,7 +4,7 @@ import { Button } from './button';
 
 
 const meta: Meta<typeof Button> = {
-    title: 'ShadCN/UI/Button',
+    title: 'ShadCN-EXAMPLE/UI/Button',
     component: Button,
     tags: ['autodocs'],
     parameters: {
@@ -30,6 +30,7 @@ export const Default : Story = {
         variant: "default",
         size: "default",
         onClick: fn().mockName("onClick handler"),
+        onMouseEnter: fn().mockName("onMouseEnter handler"),
         disabled: false,
         children: "Hello World",
         className: "hover:cursor-pointer"
