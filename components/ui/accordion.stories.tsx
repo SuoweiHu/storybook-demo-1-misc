@@ -44,7 +44,47 @@ export const Default: Story = {
                 </AccordionItem>
             </Accordion>
         )
+    }
+};
+
+export const Default_with_Interaction: Story = {
+    render: () => {
+        return (
+            <Accordion className="w-100">
+                <AccordionItem value="item-1">
+                    <AccordionTrigger>What is Storybook?</AccordionTrigger>
+                    <AccordionContent>
+                        Storybook is a tool for building and documenting UI components
+                        in isolation.
+                    </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                    <AccordionTrigger>Why use an accordion?</AccordionTrigger>
+                    <AccordionContent>
+                        Accordions organize related content into collapsible sections.
+                    </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                    <AccordionTrigger>Can I customize it?</AccordionTrigger>
+                    <AccordionContent>
+                        Yes. Pass a className or other supported props to customize the
+                        accordion and its items.
+                    </AccordionContent>
+                </AccordionItem>
+            </Accordion>
+        )
     },
+    play: async ({ canvas, userEvent }) => {
+        const expand_button = canvas.getByText('What is Storybook?', {
+            selector: 'button',
+        });
+        await userEvent.click(expand_button);
+        await userEvent.tab();
+        await userEvent.keyboard('{Enter}');
+        await userEvent.tab();
+        await userEvent.keyboard('{Enter}');
+        await userEvent.keyboard('{Escape}');
+    }
 };
 
 export const Expanded_One: Story = {
@@ -131,7 +171,7 @@ export const Multiple: Story = {
                 </AccordionItem>
             </Accordion>
         )
-    },
+    }
 };
 
 
