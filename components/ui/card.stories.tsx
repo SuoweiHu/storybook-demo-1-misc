@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardAction, CardFooter, CardHeader,
 import { Button } from './button';
 
 const meta: Meta<typeof Card> = {
-    title: "ShadCN-Example/UI/Card",
+    title: "ShadCN-EXAMPLE-UI/Card",
     component: Card,
     tags: ['autodocs'],
     parameters: {

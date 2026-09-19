@@ -4,7 +4,7 @@ import { Button } from './button';
 
 
 const meta: Meta<typeof Button> = {
-    title: 'ShadCN-EXAMPLE/UI/Button',
+    title: 'ShadCN-EXAMPLE-UI/Button',
     component: Button,
     tags: ['autodocs'],
     parameters: {
