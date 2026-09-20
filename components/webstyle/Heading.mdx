@@ -1,0 +1,249 @@
+import { Meta, Markdown } from '@storybook/addon-docs/blocks';
+
+<Meta title="WebStyle-Example/Foundation/Heading" />
+
+# Headings
+
+Headings provide page structure, improve scannability, and signal hierarchy to both users and search engines. The ANU web style system uses **Public Sans** for all heading levels with a consistent letter-spacing and a fluid font-scale across breakpoints.
+
+> **Important:** Only the heading styles documented here are permitted. Do not introduce custom font sizes or weights. Always verify colour combinations against the [Accessibility](https://webpublishing.anu.edu.au/web-style-guide/accessibility) guidelines.
+
+---
+
+## Capitalisation
+
+Headings should use **sentence case** — only the first letter and any proper nouns are capitalised.
+
+<Markdown>
+{`
+| ✅ Correct | ❌ Incorrect |
+|---|---|
+| Research and innovation at ANU | Research And Innovation At ANU |
+| College of Engineering, Computing and Cybernetics | College Of Engineering, Computing And Cybernetics |
+`}
+</Markdown>
+---
+
+## Tags & hierarchy
+
+Heading tags must be applied in a strict hierarchy. **Do not skip levels for appearance** — use the [style override classes](#style-override-classes-h1h4) instead.
+
+```
+h1  →  Page title (one per page only)
+  h2  →  Section
+    h3  →  Subsection
+      h4  →  Sub-subsection
+        h5  →  Minor heading
+          h6  →  Smallest heading
+```
+
+> **Rule:** Each page must contain **exactly one `<h1>`**. Sections should use `<h2>`, subsections `<h3>`, and so on.
+
+---
+
+## Available heading styles
+
+{/* All headings share the following base properties (from [`type.scss`](../src/styles/scss/utilities/type.scss)):
+
+- **Font family:** `Public Sans`, sans-serif
+- **Font weight:** `400` (normal)
+- **Font style:** normal
+- **Letter spacing:** `0.01em`
+- **Margin bottom:** `10px`
+- **Line height:** `1.1em` (desktop)
+
+### Desktop sizes (`≥ 992px`)
+
+<Markdown>
+{`
+| Tag | Font size | Letter spacing | Margin bottom |
+|---|---|---|---|
+| \`<h1>\` | 2.1em | 0.01em | 10px |
+| \`<h2>\` | 1.9em | 0.01em | 10px |
+| \`<h3>\` | 1.4em | 0.01em | 10px |
+| \`<h4>\` | 1.2em | 0.01em | 10px |
+| \`<h5>\` | 0.83em | 0.01em | 10px |
+| \`<h6>\` | 0.67em | 0.01em | 10px |
+`}
+</Markdown>
+
+### Responsive sizes
+
+<Markdown>
+{`
+| Tag | Mobile (< 576px) | Tablet (576px – 767px) | Mid (768px – 991px) |
+|---|---|---|---|
+| \`<h1>\` | 1.6em | 1.8em | 2.2em |
+| \`<h2>\` | 1.35em | 1.5em | 1.7em |
+| \`<h3>\` | 1.15em | 1.2em | 1.25em |
+| \`<h4>\` | 1.05em | — | 1.1em |
+| \`<h5>\` | — | — | — |
+| \`<h6>\` | — | — | — |
+`}
+</Markdown> */}
+
+### Live examples
+
+<div style={{ border: '1px solid rgba(38, 74, 115, 0.15)', box_shadow: 'rgba(0, 0, 0, 0.1) 0px 1px 3px 0px', padding: '20px', marginTop: '10px', marginBottom: '-20px' }}>
+    <h1>This sentence is using h1 tag.</h1>
+    <h2>This sentence is using h2 tag.</h2>
+    <h3>This sentence is using h3 tag.</h3>
+    <h4>This sentence is using h4 tag.</h4>
+    <h5>This sentence is using h5 tag.</h5>
+    <h6>This sentence is using h6 tag.</h6>
+</div>
+
+```html
+<h1>This sentence is using h1 tag.</h1>
+<h2>This sentence is using h2 tag.</h2>
+<h3>This sentence is using h3 tag.</h3>
+<h4>This sentence is using h4 tag.</h4>
+<h5>This sentence is using h5 tag.</h5>
+<h6>This sentence is using h6 tag.</h6>
+```
+
+
+{/*
+---
+
+## Font colours
+
+The following colour utility classes are available for headings. Always consult the [Accessibility](https://webpublishing.anu.edu.au/web-style-guide/accessibility) section for approved background/foreground combinations before applying any colour.
+
+<Markdown>
+{`
+| Class | Hex value | Usage |
+|---|---|---|
+| \`.text-black\` | \`#000000\` | Default. Black text on white or tinted backgrounds. |
+| \`.text-unigrey\` | \`#333333\` | Dark grey — suitable for white and tinted backgrounds. |
+| \`.text-gold\` | \`#be830e\` | Gold text — only passes WCAG AA at ≥ 19px semibold or ≥ 24px regular. Use with care. |
+| \`.text-white\` | \`#ffffff\` | White text — use on black or dark backgrounds only. |
+| \`.text-copper\` | \`#be4e0e\` | Copper accent — verify contrast before use. |
+| \`.text-link\` | \`#146ebd\` | Link blue — reserved for interactive/linked headings. |
+| \`.text-linkgold\` | \`#945f00\` | Gold link — passes AA on white for small text sizes. |
+`}
+</Markdown>
+
+**Examples:**
+
+```html
+<!-- Default black -->
+<h2>Black heading</h2>
+<!-- Dark grey -->
+<h2 class="text-unigrey">Dark grey heading</h2>
+<!-- Gold (large text only) -->
+<h2 class="text-gold">Gold heading</h2>
+<!-- White (on dark background) -->
+<h2 class="text-white">White heading</h2>
+```
+---
+## Style override classes (`.h1`–`.h4`)
+
+When visual design requires an `<h2>` to look like an `<h1>` (e.g. a secondary hero headline), use the matching style class on the semantically correct tag. **Do not change the tag itself** — only change its visual appearance.
+
+<Markdown>
+{`
+| Class | Applies the style of |
+|---|---|
+| \`.h1\` | \`<h1>\` |
+| \`.h2\` | \`<h2>\` |
+| \`.h3\` | \`<h3>\` |
+| \`.h4\` | \`<h4>\` |
+`}
+</Markdown>
+
+**Examples:**
+
+```html
+<!-- Visually h1, semantically h2 -->
+<h2 class="h1">Orientation Week</h2>
+
+<!-- Visually h2, semantically h3 -->
+<h3 class="h2">Example heading</h3>
+
+<!-- Visually h3, semantically h4 -->
+<h4 class="h3">Example heading</h4>
+
+<!-- Visually h4, semantically h2 -->
+<h2 class="h4">Example heading</h2>
+```
+*/}
+
+---
+
+## Hiding headings
+
+When a visible heading is not desirable but page structure still needs to be communicated to assistive technologies (e.g. screen readers), use the `scrnhide` class.
+
+```html
+<h2 class="scrnhide">Invisible heading</h2>
+```
+
+The heading will be hidden visually but will remain in the accessibility tree for screen reader users.
+
+---
+
+## Linked headings
+
+By default, a heading containing a link will display a `»` suffix and an underline on hover. Use the `nounderline` class to suppress the underline if required by the design context.
+
+```html
+<!-- Standard linked heading -->
+<h3><a href="/some-page">Example linked heading »</a></h3>
+
+<!-- Linked heading without underline -->
+<h3 class="nounderline"><a href="/some-page">Example linked heading »</a></h3>
+```
+
+View the [Links](https://webpublishing.anu.edu.au/web-style-guide/links) section for all approved linked heading styles.
+
+---
+
+## Page header (`#page-header`)
+
+The `page-header` ID is a **special, single-use** heading style intended for the name of a school or unit that doesn't appear in the banner, or for chapter/sub-headings at the very top of a page. It may only be used **once per page**.
+
+```html
+<div id="page-header">College of Engineering, Computing and Cybernetics</div>
+```
+
+- Place the element **directly above the first content item** on the page.
+- On a homepage with a banner or feature bar, the page header may sit below it — but this exception applies to the homepage only.
+- Links inside the page header are styled as plain text with an underline on hover.
+
+---
+
+## SEO guidance
+
+Heading tags signal content importance to search engines. Misusing them (e.g. using `<h1>` decoratively) damages SEO and accessibility.
+
+> **Rule:** Each page should have **exactly one `<h1>`**, and contain a range of `<h1>` to `<h3>` heading tags at minimum.
+
+<Markdown>
+{`
+| Guideline | Detail |
+|---|---|
+| One \`<h1>\` per page | The \`<h1>\` is the primary keyword signal to search engines. Multiple \`<h1>\`s dilute its effectiveness. |
+| Use \`<h1>\`–\`<h3>\` minimum | Every page should use at least three heading levels to signal topic structure. |
+| Don't skip levels | Jumping from \`<h1>\` to \`<h3>\` confuses both assistive tech and crawlers. |
+| Use style overrides for visual hierarchy | Apply \`.h1\`–\`.h4\` classes instead of changing the tag when visual and semantic levels differ. |
+`}
+</Markdown>
+
+---
+
+## Accessibility guidance
+
+<Markdown>
+{`
+| Rule | Rationale |
+|---|---|
+| One \`<h1>\` per page | Multiple \`<h1>\`s confuse screen readers and break ARIA landmark conventions. |
+| Never skip heading levels | Screen reader users navigate by heading level — skipping creates gaps in the document outline. |
+| Use \`scrnhide\` for invisible headings | Hiding with \`display: none\` removes headings from the accessibility tree entirely. |
+| Gold text requires large font | \`.text-gold\` (#be830e) only passes WCAG 2.1 AA at ≥ 19px semibold or ≥ 24px regular. Never use it at body-text sizes. |
+| White text needs dark background | \`.text-white\` only passes AA on \`#000000\` (black) and very dark ANU brand backgrounds. |
+`}
+</Markdown>
+
+Refer to the [ANU Accessibility guidelines](https://webpublishing.anu.edu.au/web-style-guide/accessibility) for the full approved colour/background matrix.
