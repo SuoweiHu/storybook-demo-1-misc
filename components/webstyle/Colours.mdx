@@ -1,0 +1,301 @@
+import { Markdown, Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+
+<Meta title="WebStyle-EXAMPLE/Foundation/Colours" />
+
+# Colours
+
+The ANU colour system is built on a small, purposeful palette. Consistent use of these colours helps reinforce the ANU brand, ensures accessible contrast ratios, and creates a coherent visual experience across all ANU web properties.
+
+> **Important:** Only colours listed in the [ANU Brand Identity](https://webpublishing.anu.edu.au/web-style-guide/colours) are permitted. Do not introduce new colours. Always check contrast ratios before using any colour combination in text — refer to the [Accessibility](https://webpublishing.anu.edu.au/web-style-guide/accessibility) section for approved combinations.
+
+<br />
+<br />
+
+
+## **Design token primitives**
+
+These CSS custom properties are defined in the UNA design token layer (`_primitive.scss`) and underpin all component styling. Use these tokens in preference to raw hex values wherever possible.
+
+<ColorPalette>
+  <ColorItem
+    title="Primary (Gold) tokens"
+    subtitle="--una-primary-{n}"
+    colors={{
+      '100 (#fff7e9)':  '#fff7e9',
+      '200 (#fcf0d7)':  '#fcf0d7',
+      '300 (#fae4b8)':  '#fae4b8',
+      '400 (#f7d490)':  '#f7d490',
+      '500 (#e8b557)':  '#e8b557',
+      '600 (#e2a22d)':  '#e2a22d',
+      '650 (#d19010)':  '#d19010',
+      '700 (#be830e)':  '#be830e',
+      '800 (#a36a00)':  '#a36a00',
+      '900 (#945f00)':  '#945f00',
+      '1000 (#7a4d00)': '#7a4d00',
+    }}
+  />
+  <ColorItem
+    title="Secondary (Copper) tokens"
+    subtitle="--una-secondary-{n}"
+    colors={{
+      '100 (#fef3ed)': '#fef3ed',
+      '200 (#fce5d7)': '#fce5d7',
+      '300 (#fad0b8)': '#fad0b8',
+      '400 (#f7b690)': '#f7b690',
+      '500 (#f3955f)': '#f3955f',
+      '600 (#ef6f25)': '#ef6f25',
+      '650 (#d15610)': '#d15610',
+      '700 (#be4f0e)': '#be4f0e',
+      '800 (#6f2e08)': '#6f2e08',
+      '900 (#3f1a05)': '#3f1a05',
+    }}
+  />
+  <ColorItem
+    title="Tertiary (Teal) tokens"
+    subtitle="--una-tertiary-{n}"
+    colors={{
+      '100 (#eafbff)': '#eafbff',
+      '200 (#d0f5ff)': '#d0f5ff',
+      '300 (#acedff)': '#acedff',
+      '400 (#7ee3ff)': '#7ee3ff',
+      '500 (#45d7ff)': '#45d7ff',
+      '600 (#00c0f5)': '#00c0f5',
+      '650 (#00a0cc)': '#00a0cc',
+      '700 (#0085ad)': '#0085ad',
+      '800 (#00546c)': '#00546c',
+      '900 (#003341)': '#003341',
+    }}
+  />
+  <ColorItem
+    title="Neutral tokens"
+    subtitle="--una-neutral-{n}"
+    colors={{
+      '0   (#ffffff)': '#ffffff',
+      '100 (#f6f6f6)': '#f6f6f6',
+      '200 (#e2e2e2)': '#e2e2e2',
+      '300 (#cccccc)': '#cccccc',
+      '400 (#afafaf)': '#afafaf',
+      '500 (#8c8c8c)': '#8c8c8c',
+      '600 (#636363)': '#636363',
+      '650 (#525252)': '#525252',
+      '700 (#333333)': '#333333',
+      '800 (#252525)': '#252525',
+      '900 (#131313)': '#131313',
+      '1000 (#000000)':'#000000',
+    }}
+  />
+  <ColorItem
+    title="Functional tokens"
+    subtitle="--una-functional-{n}-fg / -bg"
+    colors={{
+      'Error FG (#a40303)':   '#a40303',
+      'Error BG (#ffe3e3)':   '#ffe3e3',
+      'Warning FG (#c53b00)': '#c53b00',
+      'Warning BG (#faefeb)': '#faefeb',
+      'Info FG (#0846c3)':    '#0846c3',
+      'Info BG (#edf3fe)':    '#edf3fe',
+      'Success FG (#336103)': '#336103',
+      'Success BG (#effada)': '#effada',
+    }}
+  />
+</ColorPalette>
+
+<br />
+
+## **Functional / status colours**
+
+These colours are reserved exclusively for feedback messages on forms — error, warning, info, and success states. They must **not** be repurposed for decorative or branding use.
+
+<ColorPalette>
+  <ColorItem
+    title="Error"
+    subtitle="$bg-unierror-bg / $bg-unierror-brd"
+    colors={{
+      'Error Background': '#ffe3e3',
+      'Error Border':     '#ff0000',
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    subtitle="$bg-uniwarn-bg / $bg-uniwarn-brd"
+    colors={{
+      'Warning Background': '#fff9e6',
+      'Warning Border':     '#ffcc33',
+    }}
+  />
+  <ColorItem
+    title="Information"
+    subtitle="$bg-uniinfo-bg / $bg-uniinfo-brd"
+    colors={{
+      'Info Background': '#edf3fe',
+      'Info Border':     '#6699ff',
+    }}
+  />
+  <ColorItem
+    title="Success"
+    subtitle="$bg-unisuccess-bg / $bg-unisuccess-brd"
+    colors={{
+      'Success Background': '#effada',
+      'Success Border':     '#bfe498',
+    }}
+  />
+</ColorPalette>
+
+
+<br />
+<br />
+
+
+## **More Miscellaneous Colours**
+
+### Primary brand colours
+
+These are the core ANU brand colours. Gold (`#be830e`) is the primary brand colour and must be treated with care — it is **not** permitted as a text colour due to accessibility constraints.
+
+<ColorPalette>
+  <ColorItem
+    title="ANU Black"
+    subtitle="$bg-uniblack — Background only"
+    colors={{ Black: '#000000' }}
+  />
+  <ColorItem
+    title="ANU Dark Grey"
+    subtitle="$bg-unigrey — Background only"
+    colors={{ 'Dark Grey': '#333333' }}
+  />
+  <ColorItem
+    title="ANU Gold"
+    subtitle="$bg-unigold — Background only"
+    colors={{ Gold: '#be830e' }}
+  />
+  <ColorItem
+    title="ANU Tint"
+    subtitle="$bg-unitint — Background only"
+    colors={{ Tint: '#f5edde' }}
+  />
+  <ColorItem
+    title="ANU White"
+    subtitle="$bg-uniwhite — Background only"
+    colors={{ White: '#ffffff' }}
+  />
+</ColorPalette>
+
+### Links & interactive colours
+
+These colours are reserved for hyperlinks and interactive elements. Using them for decorative or non-interactive purposes is discouraged as it may cause confusion.
+
+<ColorPalette>
+  <ColorItem
+    title="Link Blue"
+    subtitle="$bg-unilink — Hyperlinks on light backgrounds"
+    colors={{ 'Link Blue': '#146ebd' }}
+  />
+  <ColorItem
+    title="Gold Link"
+    subtitle="$bg-unilinkgold — Gold hyperlinks on smaller text (AA compliant)"
+    colors={{ 'Gold Link': '#945f00' }}
+  />
+</ColorPalette>
+
+### Highlight colours
+
+Copper and Teal are accent colours used for highlights, table rows, and decorative elements. They must **not** be used as primary brand colours.
+
+<ColorPalette>
+  <ColorItem
+    title="ANU Copper"
+    subtitle="$bg-unicopper — Table highlights"
+    colors={{ Copper: '#be4e0e' }}
+  />
+  <ColorItem
+    title="ANU Teal"
+    subtitle="$bg-uniteal — Table highlights"
+    colors={{ Teal: '#008ab1' }}
+  />
+</ColorPalette>
+
+### Grey scale
+
+Used for borders, table headers, backgrounds, and typographic hierarchy. Darker greys can be used for text; lighter greys are for backgrounds and dividers only.
+
+<ColorPalette>
+  <ColorItem
+    title="Grey scale"
+    subtitle="$bg-unigrey{n} — Borders, table headers, backgrounds"
+    colors={{
+      'Grey 90 (#262626)': '#262626',
+      'Grey 78 (#5d5d60)': '#5d5d60',
+      'Grey 62 (#666666)': '#666666',
+      'Grey 56 (#888a8d)': '#888a8d',
+      'Grey 34 (#b4b6b8)': '#b4b6b8',
+      'Grey 28 (#bcbcbc)': '#bcbcbc',
+      'Grey 23 (#F2F2F2)': '#F2F2F2',
+      'Grey 20 (#D9D9D9)': '#D9D9D9',
+      'Grey 18 (#E6E6E6)': '#E6E6E6',
+      'Grey 15 (#f3f6fc)': '#f3f6fc',
+      'Grey 12 (#e2e3e4)': '#e2e3e4',
+      'Grey  8 (#cccccc)': '#cccccc',
+    }}
+  />
+</ColorPalette>
+
+### Gold scale
+
+Tints and shades of ANU Gold used for backgrounds, decorative elements, and subtle colour theming.
+
+<ColorPalette>
+  <ColorItem
+    title="Gold scale"
+    subtitle="$bg-unigold{n} — Decorative backgrounds & accents"
+    colors={{
+      'Gold 90 (#c89632)': '#c89632',
+      'Gold 78 (#cc9e43)': '#cc9e43',
+      'Gold 56 (#dbba78)': '#dbba78',
+      'Gold 34 (#e9d5ad)': '#e9d5ad',
+      'Gold 22 (#fff7e9)': '#fff7e9',
+      'Gold  6 (#F7EAC9)': '#F7EAC9',
+      'Gold  3 (#f5edde)': '#f5edde',
+    }}
+  />
+</ColorPalette>
+
+### Copper scale
+
+Tints and shades of Copper used for section highlights and decorative backgrounds.
+
+<ColorPalette>
+  <ColorItem
+    title="Copper scale"
+    subtitle="$bg-unicopper{n} — Section highlights & decorative backgrounds"
+    colors={{
+      'Copper 78 (#cc7543)': '#cc7543',
+      'Copper 56 (#db9e7a)': '#db9e7a',
+      'Copper 34 (#e9c3ad)': '#e9c3ad',
+      'Copper 28 (#efe0c3)': '#efe0c3',
+      'Copper 12 (#f7eae2)': '#f7eae2',
+    }}
+  />
+</ColorPalette>
+
+<br />
+<br />
+
+
+## **Accessibility guidance**
+
+The ANU Web Style Guide requires all colour combinations used for text to meet **WCAG 2.1 AA** contrast ratios (4.5:1 for normal text, 3:1 for large text).
+
+<Markdown>
+{`
+| Colour use | Permitted | Notes |
+| --- | --- | --- |
+| Gold text on white | ❌ No | Fails AA contrast |
+| White text on Gold | ✅ Yes | Passes AA at large sizes |
+| White text on Black | ✅ Yes | Passes AAA |
+| Black text on Tint | ✅ Yes | Passes AA |
+| Link Blue on white | ✅ Yes | Passes AA |
+| Gold Link (#945f00) on white | ✅ Yes | Passes AA for small text |
+`}
+</Markdown>
+
+Refer to the [ANU Accessibility guidelines](https://webpublishing.anu.edu.au/web-style-guide/accessibility) for the full approved colour combination matrix.
