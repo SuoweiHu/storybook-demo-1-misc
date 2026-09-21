@@ -52,3 +52,11 @@ export const Small: Story = {
     label: 'Button',
   },
 };
+
+export const Inaccessible_Example: Story = {
+  args: {
+    primary: true,
+    label: "Button",
+    backgroundColor: "#cabbbb"
+  }
+};
