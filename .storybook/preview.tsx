@@ -1,12 +1,12 @@
 import type { Preview } from '@storybook/nextjs-vite'
-import { MINIMAL_VIEWPORTS  } from 'storybook/viewport';
-import '../app/globals.css'
+import { MINIMAL_VIEWPORTS } from 'storybook/viewport';
+import '../app/globals-tailwind.css'
 
 const preview: Preview = {
     parameters: {
         // Viewports for responsive design testing
         viewport: {
-            options: MINIMAL_VIEWPORTS ,
+            options: MINIMAL_VIEWPORTS,
         },
 
         // Controls for interactive component testing
@@ -34,11 +34,23 @@ const preview: Preview = {
                 */
                 runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice', 'wcag2aaa'],
             },
-        }
+        },
+
+        // Manually sort order of stories in the Storybook sidebar
+        options: {
+            storySort: {
+                order: [
+                    'Storybook-Built-in-Example',
+                    'WebStyle-Example',
+                    'ShadCN-EXAMPLE-UI',
+                    'UNA-Example'
+                ],
+            },
+        },
     },
 
-     initialGlobals: {
-        viewport: { value: 'desktop'},
+    initialGlobals: {
+        viewport: { value: 'desktop' },
     },
 };
 
