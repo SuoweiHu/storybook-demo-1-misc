@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/nextjs-vite'
 import { MINIMAL_VIEWPORTS } from 'storybook/viewport';
-import '../app/globals-tailwind.css'
+import '../app/global-tailwind-shadcn.css'
 
 const preview: Preview = {
     parameters: {
