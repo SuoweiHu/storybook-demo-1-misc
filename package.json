@@ -9,6 +9,7 @@
     "lint": "eslint",
     "storybook-dev": "storybook dev -p 6006",
     "storybook-build": "storybook build",
+    "build-storybook": "storybook build",
     "webstyle-build": "cd components/webstyle/src && sass styles/scss:styles/css && npx webpack --config=webpack.config.js"
   },
   "dependencies": {
