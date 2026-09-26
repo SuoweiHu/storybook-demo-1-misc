@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "next-dev": "next dev",
+    "next-build": "next build",
+    "next-start": "next start",
     "lint": "eslint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "build-webstyle-src": "cd components/webstyle/src && sass styles/scss:styles/css && npx webpack --config=webpack.config.js"
+    "storybook-dev": "storybook dev -p 6006",
+    "storybook-build": "storybook build",
+    "webstyle-build": "cd components/webstyle/src && sass styles/scss:styles/css && npx webpack --config=webpack.config.js"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
