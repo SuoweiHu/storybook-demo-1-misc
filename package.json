@@ -7,9 +7,11 @@
     "next-build": "next build",
     "next-start": "next start",
     "lint": "eslint",
+    "dev": "storybook dev -p 6006",
     "storybook-dev": "storybook dev -p 6006",
     "storybook-build": "storybook build",
     "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_d1396c5f956abd7",
     "webstyle-build": "cd components/webstyle/src && sass styles/scss:styles/css && npx webpack --config=webpack.config.js"
   },
   "dependencies": {

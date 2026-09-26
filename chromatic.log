@@ -1,0 +1,337 @@
+00:02:12.039 Chromatic CLI v18.9.4
+             https://www.chromatic.com/docs/cli 
+00:02:12.052 Authenticating with Chromatic 
+00:02:12.052     → Connecting to https://index.chromatic.com
+00:02:13.345 Authenticated with Chromatic
+00:02:13.346     → Using project token '****************abd7'
+00:02:13.346 Retrieving git information
+00:02:13.346 execGitCommand: git --version
+00:02:13.358 execGitCommand result: 'git version 2.55.0'
+00:02:13.358 execGitCommand: git --no-pager log -n 1 --format="%H ## %ct ## %ae ## %an"
+00:02:13.369 execGitCommand result: 'f9b91a7e800fc0afb3da7baf9f547dffb7e9ec1f ## 1790431149 ## suowei.h@gmail.com ## SuoweiHu'
+00:02:13.369 execGitCommand: git branch --show-current
+00:02:13.377 execGitCommand result: 'main'
+00:02:13.389 execGitCommand: git --no-pager log -n 1 --skip=1 --format="%H"
+00:02:13.399 execGitCommand result: 'c0337b01d5a75d15c04a9bd08321c5ecf882ed56'
+00:02:13.399 git info: {"commit":{"commit":"f9b91a7e800fc0afb3da7baf9f547dffb7e9ec1f","committedAt":1790431149000,"committerEmail":"suowei.h@gmail.com","committerName":"SuoweiHu"},"branch":"main","fromCI":false}
+00:02:13.399 execGitCommand: git config user.email
+00:02:13.409 execGitCommand result: 'suowei.h@gmail.com'
+00:02:13.409 execGitCommand: git diff --name-only --no-relative --diff-filter=d --cached
+00:02:13.410 execGitCommand: git diff --name-only --no-relative --diff-filter=d
+00:02:13.410 execGitCommand: git ls-files --others --exclude-standard
+00:02:13.418 execGitCommand result: ''
+00:02:13.418 execGitCommand result: 'chromatic.log'
+00:02:13.436 execGitCommand result: 'package.json'
+00:02:13.437 execGitCommand: git hash-object --stdin-paths
+00:02:13.446 execGitCommand result: '57b4d6f73d7e0b6022c9fe3ca106c909ee2ec769
+             33af5e81cdac612f88f315b22fef618b84d6b39d'
+00:02:13.446 execGitCommand: git hash-object --stdin
+00:02:13.454 execGitCommand result: '8a3c53b2651b3928f35cdab4b40a588f39b41c87'
+00:02:13.454 execGitCommand: git rev-parse --show-toplevel
+00:02:13.462 execGitCommand result: '/Users/suowei_hu/Sites/storybook/storybook-demo-1-misc'
+00:02:13.463 execGitCommandOneLine: git log --reverse --format=%cd --date=iso
+00:02:13.478 execGitCommandOneLine: git log --follow --reverse --format=%cd --date=iso -- .storybook
+00:02:13.489 execGitCommandCountLines: git shortlog -sn --all --since="6 months ago"
+00:02:13.500 execGitCommandCountLines: git ls-files -- "*page*.js" "*page*.jsx" "*page*.ts" "*page*.tsx" "*Page*.js" "*Page*.jsx" "*Page*.ts" "*Page*.tsx" "*screen*.js" "*screen*.jsx" "*screen*.ts" "*screen*.tsx" "*Screen*.js" "*Screen*.jsx" "*Screen*.ts" "*Screen*.tsx"
+00:02:13.508 execGitCommand: git config --get remote.origin.url
+00:02:13.516 execGitCommand result: 'git@github.com:SuoweiHu/storybook-demo-1-misc.git'
+00:02:13.516 execGitCommandOneLine: git rev-parse --is-shallow-repository
+00:02:13.517 execGitCommandOneLine: git config remote.origin.partialclonefilter
+00:02:13.525 Git clone type: {"cloneDepth":"full","cloneFilter":"full","shallowBoundaryCommitCount":0,"firstShallowBoundaryCommits":[]}
+00:02:14.199 App firstBuild: %o, lastBuild: %o {"committedAt":1789790258000} {"commit":"9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69","committedAt":1789790258000}
+00:02:14.199 execGitCommand: git cat-file -e "9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69^{commit}"
+00:02:14.211 execGitCommand result: ''
+00:02:14.211 Adding last branch build commit 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69 to commits with builds
+00:02:14.212 step: checking 20 up to 1789790258
+00:02:14.212 step: commitsWithBuilds: 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:14.212 step: commitsWithoutBuilds:
+00:02:14.212 execGitCommand: git rev-list HEAD       --since 1789790258       -n 20 --not 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:14.225 execGitCommand result: 'f9b91a7e800fc0afb3da7baf9f547dffb7e9ec1f
+             c0337b01d5a75d15c04a9bd08321c5ecf882ed56
+             6eb58a1cf67d063f55686b12647c963d0abd1b85
+             8fab515a14ac484d0c12144f8d7f940588ca9c0e
+             f6049a2b20bc9639c43f5c43fd69ff9139c08184
+             adf6252510ff99fb34de52a62debfd51594d01ed
+             ae96ad5348f6fb48902705bfcb5c211f7288c0ed
+             56782f4dc5c27e82f51428fd51a50d8a6b5540c7
+             302a225adad6835ba28c54f848d546e50c6c97e9
+             5dd8832035f444917a60811bd1e57be73c5c4161
+             cdc1a6f27d956979320e330840bcf5ba31e6b10d
+             2be7d55c77f32164a25880b8e15dc38e22b5a34b
+             5c475cfa1de2f762cae614ba4005b1ccd6c31886
+             790f66a6be75d2a56fa7489291e6721c648dbeb3
+             b91ac7cfc15fa1a38123aebe1e24c185507f29f6
+             bbe2d03fb5a31a132237254199986cfc6ba45c91
+             429ca50da8eaf9ead885b378fc4ba6193314e3ba
+             0efbdac0d6bf835a2fa29a2c91c17915671577b3
+             14b61f5813b06f16c77ce868afd7f6cbde9a970c
+             31f8997276a323d9d81c7b68f1e0db40add404a7'
+00:02:14.225 step: candidateCommits: f9b91a7e800fc0afb3da7baf9f547dffb7e9ec1f,c0337b01d5a75d15c04a9bd08321c5ecf882ed56,6eb58a1cf67d063f55686b12647c963d0abd1b85,8fab515a14ac484d0c12144f8d7f940588ca9c0e,f6049a2b20bc9639c43f5c43fd69ff9139c08184,adf6252510ff99fb34de52a62debfd51594d01ed,ae96ad5348f6fb48902705bfcb5c211f7288c0ed,56782f4dc5c27e82f51428fd51a50d8a6b5540c7,302a225adad6835ba28c54f848d546e50c6c97e9,5dd8832035f444917a60811bd1e57be73c5c4161,cdc1a6f27d956979320e330840bcf5ba31e6b10d,2be7d55c77f32164a25880b8e15dc38e22b5a34b,5c475cfa1de2f762cae614ba4005b1ccd6c31886,790f66a6be75d2a56fa7489291e6721c648dbeb3,b91ac7cfc15fa1a38123aebe1e24c185507f29f6,bbe2d03fb5a31a132237254199986cfc6ba45c91,429ca50da8eaf9ead885b378fc4ba6193314e3ba,0efbdac0d6bf835a2fa29a2c91c17915671577b3,14b61f5813b06f16c77ce868afd7f6cbde9a970c,31f8997276a323d9d81c7b68f1e0db40add404a7, visitedCommitsWithoutBuilds: f9b91a7e800fc0afb3da7baf9f547dffb7e9ec1f,c0337b01d5a75d15c04a9bd08321c5ecf882ed56,6eb58a1cf67d063f55686b12647c963d0abd1b85,8fab515a14ac484d0c12144f8d7f940588ca9c0e,f6049a2b20bc9639c43f5c43fd69ff9139c08184,adf6252510ff99fb34de52a62debfd51594d01ed,ae96ad5348f6fb48902705bfcb5c211f7288c0ed,56782f4dc5c27e82f51428fd51a50d8a6b5540c7,302a225adad6835ba28c54f848d546e50c6c97e9,5dd8832035f444917a60811bd1e57be73c5c4161,cdc1a6f27d956979320e330840bcf5ba31e6b10d,2be7d55c77f32164a25880b8e15dc38e22b5a34b,5c475cfa1de2f762cae614ba4005b1ccd6c31886,790f66a6be75d2a56fa7489291e6721c648dbeb3,b91ac7cfc15fa1a38123aebe1e24c185507f29f6,bbe2d03fb5a31a132237254199986cfc6ba45c91,429ca50da8eaf9ead885b378fc4ba6193314e3ba,0efbdac0d6bf835a2fa29a2c91c17915671577b3,14b61f5813b06f16c77ce868afd7f6cbde9a970c,31f8997276a323d9d81c7b68f1e0db40add404a7
+00:02:14.875 step: newCommitsWithBuilds:
+00:02:14.877 step: checking 40 up to 1789790258
+00:02:14.877 step: commitsWithBuilds: 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:14.877 step: commitsWithoutBuilds: f9b91a7e800fc0afb3da7baf9f547dffb7e9ec1f,c0337b01d5a75d15c04a9bd08321c5ecf882ed56,6eb58a1cf67d063f55686b12647c963d0abd1b85,8fab515a14ac484d0c12144f8d7f940588ca9c0e,f6049a2b20bc9639c43f5c43fd69ff9139c08184,adf6252510ff99fb34de52a62debfd51594d01ed,ae96ad5348f6fb48902705bfcb5c211f7288c0ed,56782f4dc5c27e82f51428fd51a50d8a6b5540c7,302a225adad6835ba28c54f848d546e50c6c97e9,5dd8832035f444917a60811bd1e57be73c5c4161,cdc1a6f27d956979320e330840bcf5ba31e6b10d,2be7d55c77f32164a25880b8e15dc38e22b5a34b,5c475cfa1de2f762cae614ba4005b1ccd6c31886,790f66a6be75d2a56fa7489291e6721c648dbeb3,b91ac7cfc15fa1a38123aebe1e24c185507f29f6,bbe2d03fb5a31a132237254199986cfc6ba45c91,429ca50da8eaf9ead885b378fc4ba6193314e3ba,0efbdac0d6bf835a2fa29a2c91c17915671577b3,14b61f5813b06f16c77ce868afd7f6cbde9a970c,31f8997276a323d9d81c7b68f1e0db40add404a7
+00:02:14.878 execGitCommand: git rev-list HEAD       --since 1789790258       -n 60 --not 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:14.902 execGitCommand result: 'f9b91a7e800fc0afb3da7baf9f547dffb7e9ec1f
+             c0337b01d5a75d15c04a9bd08321c5ecf882ed56
+             6eb58a1cf67d063f55686b12647c963d0abd1b85
+             8fab515a14ac484d0c12144f8d7f940588ca9c0e
+             f6049a2b20bc9639c43f5c43fd69ff9139c08184
+             adf6252510ff99fb34de52a62debfd51594d01ed
+             ae96ad5348f6fb48902705bfcb5c211f7288c0ed
+             56782f4dc5c27e82f51428fd51a50d8a6b5540c7
+             302a225adad6835ba28c54f848d546e50c6c97e9
+             5dd8832035f444917a60811bd1e57be73c5c4161
+             cdc1a6f27d956979320e330840bcf5ba31e6b10d
+             2be7d55c77f32164a25880b8e15dc38e22b5a34b
+             5c475cfa1de2f762cae614ba4005b1ccd6c31886
+             790f66a6be75d2a56fa7489291e6721c648dbeb3
+             b91ac7cfc15fa1a38123aebe1e24c185507f29f6
+             bbe2d03fb5a31a132237254199986cfc6ba45c91
+             429ca50da8eaf9ead885b378fc4ba6193314e3ba
+             0efbdac0d6bf835a2fa29a2c91c17915671577b3
+             14b61f5813b06f16c77ce868afd7f6cbde9a970c
+             31f8997276a323d9d81c7b68f1e0db40add404a7
+             763758d36ac3867d4afa0dbed71dc723fcea30ec'
+00:02:14.902 step: candidateCommits: 763758d36ac3867d4afa0dbed71dc723fcea30ec, visitedCommitsWithoutBuilds: f9b91a7e800fc0afb3da7baf9f547dffb7e9ec1f,c0337b01d5a75d15c04a9bd08321c5ecf882ed56,6eb58a1cf67d063f55686b12647c963d0abd1b85,8fab515a14ac484d0c12144f8d7f940588ca9c0e,f6049a2b20bc9639c43f5c43fd69ff9139c08184,adf6252510ff99fb34de52a62debfd51594d01ed,ae96ad5348f6fb48902705bfcb5c211f7288c0ed,56782f4dc5c27e82f51428fd51a50d8a6b5540c7,302a225adad6835ba28c54f848d546e50c6c97e9,5dd8832035f444917a60811bd1e57be73c5c4161,cdc1a6f27d956979320e330840bcf5ba31e6b10d,2be7d55c77f32164a25880b8e15dc38e22b5a34b,5c475cfa1de2f762cae614ba4005b1ccd6c31886,790f66a6be75d2a56fa7489291e6721c648dbeb3,b91ac7cfc15fa1a38123aebe1e24c185507f29f6,bbe2d03fb5a31a132237254199986cfc6ba45c91,429ca50da8eaf9ead885b378fc4ba6193314e3ba,0efbdac0d6bf835a2fa29a2c91c17915671577b3,14b61f5813b06f16c77ce868afd7f6cbde9a970c,31f8997276a323d9d81c7b68f1e0db40add404a7,763758d36ac3867d4afa0dbed71dc723fcea30ec
+00:02:15.554 step: newCommitsWithBuilds:
+00:02:15.554 step: checking 80 up to 1789790258
+00:02:15.554 step: commitsWithBuilds: 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:15.554 step: commitsWithoutBuilds: f9b91a7e800fc0afb3da7baf9f547dffb7e9ec1f,c0337b01d5a75d15c04a9bd08321c5ecf882ed56,6eb58a1cf67d063f55686b12647c963d0abd1b85,8fab515a14ac484d0c12144f8d7f940588ca9c0e,f6049a2b20bc9639c43f5c43fd69ff9139c08184,adf6252510ff99fb34de52a62debfd51594d01ed,ae96ad5348f6fb48902705bfcb5c211f7288c0ed,56782f4dc5c27e82f51428fd51a50d8a6b5540c7,302a225adad6835ba28c54f848d546e50c6c97e9,5dd8832035f444917a60811bd1e57be73c5c4161,cdc1a6f27d956979320e330840bcf5ba31e6b10d,2be7d55c77f32164a25880b8e15dc38e22b5a34b,5c475cfa1de2f762cae614ba4005b1ccd6c31886,790f66a6be75d2a56fa7489291e6721c648dbeb3,b91ac7cfc15fa1a38123aebe1e24c185507f29f6,bbe2d03fb5a31a132237254199986cfc6ba45c91,429ca50da8eaf9ead885b378fc4ba6193314e3ba,0efbdac0d6bf835a2fa29a2c91c17915671577b3,14b61f5813b06f16c77ce868afd7f6cbde9a970c,31f8997276a323d9d81c7b68f1e0db40add404a7,763758d36ac3867d4afa0dbed71dc723fcea30ec
+00:02:15.554 execGitCommand: git rev-list HEAD       --since 1789790258       -n 101 --not 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:15.570 execGitCommand result: 'f9b91a7e800fc0afb3da7baf9f547dffb7e9ec1f
+             c0337b01d5a75d15c04a9bd08321c5ecf882ed56
+             6eb58a1cf67d063f55686b12647c963d0abd1b85
+             8fab515a14ac484d0c12144f8d7f940588ca9c0e
+             f6049a2b20bc9639c43f5c43fd69ff9139c08184
+             adf6252510ff99fb34de52a62debfd51594d01ed
+             ae96ad5348f6fb48902705bfcb5c211f7288c0ed
+             56782f4dc5c27e82f51428fd51a50d8a6b5540c7
+             302a225adad6835ba28c54f848d546e50c6c97e9
+             5dd8832035f444917a60811bd1e57be73c5c4161
+             cdc1a6f27d956979320e330840bcf5ba31e6b10d
+             2be7d55c77f32164a25880b8e15dc38e22b5a34b
+             5c475cfa1de2f762cae614ba4005b1ccd6c31886
+             790f66a6be75d2a56fa7489291e6721c648dbeb3
+             b91ac7cfc15fa1a38123aebe1e24c185507f29f6
+             bbe2d03fb5a31a132237254199986cfc6ba45c91
+             429ca50da8eaf9ead885b378fc4ba6193314e3ba
+             0efbdac0d6bf835a2fa29a2c91c17915671577b3
+             14b61f5813b06f16c77ce868afd7f6cbde9a970c
+             31f8997276a323d9d81c7b68f1e0db40add404a7
+             763758d36ac3867d4afa0dbed71dc723fcea30ec'
+00:02:15.571 step: candidateCommits: , visitedCommitsWithoutBuilds: f9b91a7e800fc0afb3da7baf9f547dffb7e9ec1f,c0337b01d5a75d15c04a9bd08321c5ecf882ed56,6eb58a1cf67d063f55686b12647c963d0abd1b85,8fab515a14ac484d0c12144f8d7f940588ca9c0e,f6049a2b20bc9639c43f5c43fd69ff9139c08184,adf6252510ff99fb34de52a62debfd51594d01ed,ae96ad5348f6fb48902705bfcb5c211f7288c0ed,56782f4dc5c27e82f51428fd51a50d8a6b5540c7,302a225adad6835ba28c54f848d546e50c6c97e9,5dd8832035f444917a60811bd1e57be73c5c4161,cdc1a6f27d956979320e330840bcf5ba31e6b10d,2be7d55c77f32164a25880b8e15dc38e22b5a34b,5c475cfa1de2f762cae614ba4005b1ccd6c31886,790f66a6be75d2a56fa7489291e6721c648dbeb3,b91ac7cfc15fa1a38123aebe1e24c185507f29f6,bbe2d03fb5a31a132237254199986cfc6ba45c91,429ca50da8eaf9ead885b378fc4ba6193314e3ba,0efbdac0d6bf835a2fa29a2c91c17915671577b3,14b61f5813b06f16c77ce868afd7f6cbde9a970c,31f8997276a323d9d81c7b68f1e0db40add404a7,763758d36ac3867d4afa0dbed71dc723fcea30ec
+00:02:15.571 step: no candidateCommits; we are done
+00:02:16.287 Final commitsWithBuilds: 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:16.288 execGitCommand: git rev-list 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69 --not "9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69^@"
+00:02:16.303 execGitCommand result: '9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69'
+00:02:16.303 execGitCommand: git log --no-walk=unsorted --format=%H%x00%P%x00%s%x00 f9b91a7e800fc0afb3da7baf9f547dffb7e9ec1f c0337b01d5a75d15c04a9bd08321c5ecf882ed56 6eb58a1cf67d063f55686b12647c963d0abd1b85 8fab515a14ac484d0c12144f8d7f940588ca9c0e f6049a2b20bc9639c43f5c43fd69ff9139c08184 adf6252510ff99fb34de52a62debfd51594d01ed ae96ad5348f6fb48902705bfcb5c211f7288c0ed 56782f4dc5c27e82f51428fd51a50d8a6b5540c7 302a225adad6835ba28c54f848d546e50c6c97e9 5dd8832035f444917a60811bd1e57be73c5c4161 cdc1a6f27d956979320e330840bcf5ba31e6b10d 2be7d55c77f32164a25880b8e15dc38e22b5a34b 5c475cfa1de2f762cae614ba4005b1ccd6c31886 790f66a6be75d2a56fa7489291e6721c648dbeb3 b91ac7cfc15fa1a38123aebe1e24c185507f29f6 bbe2d03fb5a31a132237254199986cfc6ba45c91 429ca50da8eaf9ead885b378fc4ba6193314e3ba 0efbdac0d6bf835a2fa29a2c91c17915671577b3 14b61f5813b06f16c77ce868afd7f6cbde9a970c 31f8997276a323d9d81c7b68f1e0db40add404a7 763758d36ac3867d4afa0dbed71dc723fcea30ec 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:16.316 execGitCommand result: 'f9b91a7e800fc0afb3da7baf9f547dffb7e9ec1f c0337b01d5a75d15c04a9bd08321c5ecf882ed56 Updated readme file 
+             c0337b01d5a75d15c04a9bd08321c5ecf882ed56 6eb58a1cf67d063f55686b12647c963d0abd1b85 Misc - resolve nextjs warning, change npm scripts 
+             6eb58a1cf67d063f55686b12647c963d0abd1b85 8fab515a14ac484d0c12144f8d7f940588ca9c0e Rename "global.css" to "global-tailwind.css" for clarity 
+             8fab515a14ac484d0c12144f8d7f940588ca9c0e f6049a2b20bc9639c43f5c43fd69ff9139c08184 Set manual ordering of stories (in sidebar) via preview.tsx 
+             f6049a2b20bc9639c43f5c43fd69ff9139c08184 adf6252510ff99fb34de52a62debfd51594d01ed Added [Inaccessible Example <Button>] story for showcase purpose 
+             adf6252510ff99fb34de52a62debfd51594d01ed ae96ad5348f6fb48902705bfcb5c211f7288c0ed Adding [Public-Sans] font and set it as the default font for tailwind 
+             ae96ad5348f6fb48902705bfcb5c211f7288c0ed 56782f4dc5c27e82f51428fd51a50d8a6b5540c7 Webstyle Carousel with auto-generated Docs 
+             56782f4dc5c27e82f51428fd51a50d8a6b5540c7 302a225adad6835ba28c54f848d546e50c6c97e9 Webstyle Heading (Foundation) MDX document 
+             302a225adad6835ba28c54f848d546e50c6c97e9 5dd8832035f444917a60811bd1e57be73c5c4161 Webstyle Colours (Foundation) MDX document 
+             5dd8832035f444917a60811bd1e57be73c5c4161 cdc1a6f27d956979320e330840bcf5ba31e6b10d Webstyle Input (Component, Stories, Docs--Manual) 
+             cdc1a6f27d956979320e330840bcf5ba31e6b10d 2be7d55c77f32164a25880b8e15dc38e22b5a34b WebStyle Use Message Stories in MDX <Canvas> 
+             2be7d55c77f32164a25880b8e15dc38e22b5a34b 5c475cfa1de2f762cae614ba4005b1ccd6c31886 Update webstyles submodule (to resolve Chromatic errors) 
+             5c475cfa1de2f762cae614ba4005b1ccd6c31886 790f66a6be75d2a56fa7489291e6721c648dbeb3 WebStyle Example using Message (Component + Stories) 
+             790f66a6be75d2a56fa7489291e6721c648dbeb3 b91ac7cfc15fa1a38123aebe1e24c185507f29f6 Rename Storybook Built-in Example folder 
+             b91ac7cfc15fa1a38123aebe1e24c185507f29f6 bbe2d03fb5a31a132237254199986cfc6ba45c91 WebStyle Added Submodule and Setup Basic Example using Message 
+             bbe2d03fb5a31a132237254199986cfc6ba45c91 429ca50da8eaf9ead885b378fc4ba6193314e3ba Rename ShadCN storybook folder 
+             429ca50da8eaf9ead885b378fc4ba6193314e3ba 0efbdac0d6bf835a2fa29a2c91c17915671577b3 Tailwind Prefix Experiment Revert (remove "storybook:" tailwind prefix) 
+             0efbdac0d6bf835a2fa29a2c91c17915671577b3 14b61f5813b06f16c77ce868afd7f6cbde9a970c Tailwind Prefix Experiment (add "storybook:" tailwind prefix) 
+             14b61f5813b06f16c77ce868afd7f6cbde9a970c 31f8997276a323d9d81c7b68f1e0db40add404a7 Component Card (First Draft, in Storybook Story, MDX, and NextJS page.tsx) 
+             31f8997276a323d9d81c7b68f1e0db40add404a7 763758d36ac3867d4afa0dbed71dc723fcea30ec Rename ShadCN sotrybook folder 
+             763758d36ac3867d4afa0dbed71dc723fcea30ec 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69 Added chromatic configuration (for visual testing) 
+             9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69 125da108bddc93e6b3df715ccb760fccf9e55c24 Added accessibility (WCAG) testing rulesets '
+00:02:16.316 visitedCommits: total=22, withBuilds=1, mergePoints=0
+00:02:16.316 Found parentCommits: 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:17.596 Found baselineCommits: 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69, 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69, 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69, 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69, 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:17.597 Got error fetching commit for #5(9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69): Baseline build had uncommitted changes: 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:17.598 Got error fetching commit for #4(9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69): Baseline build had uncommitted changes: 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:17.599 Got error fetching commit for #3(9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69): Baseline build had uncommitted changes: 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:17.600 Got error fetching commit for #2(9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69): Baseline build had uncommitted changes: 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:17.601 Got error fetching commit for #1(9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69): Baseline build had uncommitted changes: 9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69
+00:02:18.238 execGitCommand: git cat-file -e "9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69^{commit}"
+00:02:18.241 execGitCommand: git cat-file -e "9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69^{commit}"
+00:02:18.243 execGitCommand: git cat-file -e "9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69^{commit}"
+00:02:18.246 execGitCommand: git cat-file -e "9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69^{commit}"
+00:02:18.246 execGitCommand: git cat-file -e "9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69^{commit}"
+00:02:18.248 Couldn't find replacement for #1(9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69)
+00:02:18.253 ⚠ TurboSnap disabled due to missing git history
+             Could not retrieve changed files since baseline commit(s).
+             This typically happens after rebasing, force pushing, or when running against an ephemeral merge commit.
+             ℹ Read more at https://www.chromatic.com/docs/turbosnap#how-it-works
+00:02:18.253 {"commit":"9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69","name":"BaselineDirtyError"}
+00:02:18.254 Retrieved git information
+00:02:18.254     → Commit 'f9b91a7' on branch 'main'; found 1 parent build; TurboSnap disabled
+00:02:18.254 Collecting Storybook metadata
+00:02:18.261 {"storybookV6error":{"code":"MODULE_NOT_FOUND","requireStack":["/Users/suowei_hu/Sites/storybook/storybook-demo-1-misc/node_modules/chromatic/dist/projectFiles-BErzDcj6.cjs","/Users/suowei_hu/Sites/storybook/storybook-demo-1-misc/node_modules/chromatic/dist/node-src-B3Zyu6y_.cjs","/Users/suowei_hu/Sites/storybook/storybook-demo-1-misc/node_modules/chromatic/dist/main-11aBrET4.cjs","/Users/suowei_hu/Sites/storybook/storybook-demo-1-misc/node_modules/chromatic/dist/bin.cjs"]}}
+00:02:18.262 execGitCommand: git cat-file -e "9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69^{commit}"
+00:02:18.262 execGitCommand: git cat-file -e "9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69^{commit}"
+00:02:18.263 execGitCommand: git cat-file -e "9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69^{commit}"
+00:02:18.264 execGitCommand: git cat-file -e "9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69^{commit}"
+00:02:18.264 execGitCommand: git cat-file -e "9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69^{commit}"
+00:02:18.266 execGitCommand result: ''
+00:02:18.266 execGitCommand result: ''
+00:02:18.266 execGitCommand result: ''
+00:02:18.266 execGitCommand result: ''
+00:02:18.266 Couldn't find replacement for #5(9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69)
+00:02:18.266 execGitCommand result: ''
+00:02:18.266 Couldn't find replacement for #2(9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69)
+00:02:18.275 {"configDirectory":"/Users/suowei_hu/Sites/storybook/storybook-demo-1-misc/.storybook","mainConfig":{"code":"import type { StorybookConfig } from '@storybook/nextjs-vite';\n\nconst config: StorybookConfig = {\n  \"stories\": [\n    \"./storybook-example/**/*.mdx\",\n    \"./storybook-example/**/*.stories.@(js|jsx|mjs|ts|tsx)\",\n    \"../components/**/*.mdx\",\n    \"../components/**/*.stories.@(js|jsx|mjs|ts|tsx)\",\n  ],\n  \"addons\": [\n    \"@chromatic-com/storybook\",\n    \"@storybook/addon-vitest\",\n    \"@storybook/addon-a11y\",\n    \"@storybook/addon-docs\",\n    \"@storybook/addon-onboarding\",\n    \"@whitespace/storybook-addon-html\"\n  ],\n  \"framework\": \"@storybook/nextjs-vite\",\n  \"staticDirs\": [\n    \"../public\"\n  ]\n};\nexport default config;"}}
+00:02:18.278 execGitCommand result: ''
+00:02:18.278 execGitCommand result: ''
+00:02:18.278 Couldn't find replacement for #3(9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69)
+00:02:18.278 execGitCommand result: ''
+00:02:18.278 execGitCommand result: ''
+00:02:18.278 execGitCommand result: ''
+00:02:18.278 Couldn't find replacement for #4(9a41c0e47b353230fe2be5f60bcb6b32f8ba1d69)
+00:02:18.280 [{"status":"fulfilled","value":{"version":"10.6.0"}},{"status":"rejected","reason":{}},{"status":"fulfilled","value":{}}]
+00:02:18.281 Collected Storybook metadata
+00:02:18.281     → Build metadata gathered
+00:02:18.281 Initializing build
+00:02:18.281 Got environment:
+             {}
+00:02:19.016 [analytics] initializing Index analytics client
+00:02:19.016 Initialized build
+00:02:19.017     → Build 6 initialized
+00:02:19.018 Building your Storybook
+00:02:19.024     → Running command: npm run build-storybook -- --output-dir=/private/var/folders/pc/s7_ww61s631bwjhy_6k9v3c80000gn/T/chromatic--66145-OE6rvbnse0FY --stats-json=/private/var/folders/pc/s7_ww61s631bwjhy_6k9v3c80000gn/T/chromatic--66145-OE6rvbnse0FY
+00:02:19.024 Running build command: npm run build-storybook -- --output-dir=/private/var/folders/pc/s7_ww61s631bwjhy_6k9v3c80000gn/T/chromatic--66145-OE6rvbnse0FY --stats-json=/private/var/folders/pc/s7_ww61s631bwjhy_6k9v3c80000gn/T/chromatic--66145-OE6rvbnse0FY
+00:02:19.025 Runtime metadata: {
+               "nodePlatform": "darwin",
+               "nodeVersion": "24.12.0",
+               "packageManager": "npm",
+               "packageManagerVersion": "11.18.0"
+             }
+00:02:22.505 Storybook built in 3 seconds
+00:02:22.505     → View build log at /Users/suowei_hu/Sites/storybook/storybook-demo-1-misc/build-storybook.log
+00:02:22.505 Prepare your built Storybook
+00:02:22.506     → Validating Storybook files
+00:02:22.520 Tracing changed files with TurboSnap v2
+00:02:22.768 Found 16 story files from preview-stats.json
+00:02:22.779 Attributed 5 files to the preview config subtree
+00:02:22.779 Found 280 files in Storybook globals (files that could impact rendering across the entire Storybook)
+00:02:22.782 Hashed 6 static files in /Users/suowei_hu/Sites/storybook/storybook-demo-1-misc/public
+00:02:22.782 Hashed 28 storybook config files in /Users/suowei_hu/Sites/storybook/storybook-demo-1-misc/.storybook
+00:02:22.782 Generated manifest for TurboSnap v2
+00:02:22.795 Wrote manifest for TurboSnap v2 to /private/var/folders/pc/s7_ww61s631bwjhy_6k9v3c80000gn/T/chromatic--66145-OE6rvbnse0FY/.chromatic/turbosnap-manifest.json
+00:02:23.466 Uploaded hashes for TurboSnap v2 to Chromatic
+00:02:23.467     → Calculating file hashes
+00:02:23.472 Calculated file hashes in 5ms
+00:02:23.473 Preparation complete
+00:02:23.473     → Storybook files validated and prepared for upload
+00:02:23.474 Publishing your built Storybook
+00:02:23.474     → Starting publish
+00:02:23.475 Running uploadBuild batch 1 / 1
+00:02:24.154 Adding to zip archive: 2026-09-26T161226.png
+00:02:24.155 Adding to zip archive: assets/Button-BmMlN3a8.js
+00:02:24.156 Adding to zip archive: assets/Button.stories-CBQX9aqH.js
+00:02:24.156 Adding to zip archive: assets/Carousel.stories-1JKc5mg6.js
+00:02:24.156 Adding to zip archive: assets/Color-6AOWCN3U-DJoxiB9Z.js
+00:02:24.156 Adding to zip archive: assets/Colours-Dp-UsROo.js
+00:02:24.156 Adding to zip archive: assets/Configure-DujAi_op.js
+00:02:24.156 Adding to zip archive: assets/DocsRenderer-JROSPFPF-BTf04KAN.js
+00:02:24.157 Adding to zip archive: assets/Header-DtqzuEvX.js
+00:02:24.157 Adding to zip archive: assets/Header.stories-Cqni0OyR.js
+00:02:24.157 Adding to zip archive: assets/Heading-DHJR9jQL.js
+00:02:24.157 Adding to zip archive: assets/Input-BY8T9mdg.js
+00:02:24.157 Adding to zip archive: assets/Input.stories-pjquIRi6.js
+00:02:24.157 Adding to zip archive: assets/Message-C2uNUnIo.js
+00:02:24.157 Adding to zip archive: assets/Message.stories-Lg7i4P6W.js
+00:02:24.157 Adding to zip archive: assets/Page.stories-Db3Api01.js
+00:02:24.157 Adding to zip archive: assets/WithTooltip-CDUNV5IS-BvwitGC5.js
+00:02:24.157 Adding to zip archive: assets/accessibility-W_h2acOZ.png
+00:02:24.157 Adding to zip archive: assets/accordion.stories-DiPu_hty.js
+00:02:24.157 Adding to zip archive: assets/addon-library-BWUCAmyN.png
+00:02:24.157 Adding to zip archive: assets/blocks-BcSkjpDH.js
+00:02:24.158 Adding to zip archive: assets/button-XjdcgyUT.js
+00:02:24.158 Adding to zip archive: assets/button.stories-i1ZsvLXc.js
+00:02:24.158 Adding to zip archive: assets/card.stories-CDr9p4Ed.js
+00:02:24.158 Adding to zip archive: assets/chunk-242VQQM5-Mgu9ZWtn.js
+00:02:24.158 Adding to zip archive: assets/chunk-7PIQR4A3-B40WzkBd.js
+00:02:24.158 Adding to zip archive: assets/chunk-DRQKCCAG-BNwKD1BG.js
+00:02:24.158 Adding to zip archive: assets/chunk-IMSF75WX-DNrZgEBt.js
+00:02:24.158 Adding to zip archive: assets/chunk-QQBDHPVZ-C-IzcanZ.js
+00:02:24.158 Adding to zip archive: assets/chunk-W22LQPXL-LBgdJ6y9.js
+00:02:24.158 Adding to zip archive: assets/context-C0qIqeS4.png
+00:02:24.158 Adding to zip archive: assets/dist-CGXfmHsh.js
+00:02:24.158 Adding to zip archive: assets/docs---vsFbMi.png
+00:02:24.158 Adding to zip archive: assets/example-mdx-button-CKCQ9ELB.js
+00:02:24.158 Adding to zip archive: assets/example-mdx-interaction-DmCDgKS5.js
+00:02:24.158 Adding to zip archive: assets/export-9BeCuFy9.css
+00:02:24.158 Adding to zip archive: assets/export-CNReAxrZ.js
+00:02:24.158 Adding to zip archive: assets/figma-plugin-CH2hELiO.png
+00:02:24.158 Adding to zip archive: assets/formatter-L2YTDE3Q-DTwMzcvu.js
+00:02:24.158 Adding to zip archive: assets/iframe-BraJDiIa.js
+00:02:24.159 Adding to zip archive: assets/iframe-DAHS9GRQ.js
+00:02:24.159 Adding to zip archive: assets/iframe-l2Z5Ayht.css
+00:02:24.159 Adding to zip archive: assets/react-18-BlwUqXR9.js
+00:02:24.159 Adding to zip archive: assets/react-DgUa_zLF.js
+00:02:24.159 Adding to zip archive: assets/react-Z7gd5LxR.js
+00:02:24.159 Adding to zip archive: assets/share-DGA-UcQf.png
+00:02:24.159 Adding to zip archive: assets/styling-Bk6zjRzU.png
+00:02:24.159 Adding to zip archive: assets/syntaxhighlighter-4REYKNEV-5SO8DAcJ.js
+00:02:24.159 Adding to zip archive: assets/testing-cbzR9l9r.png
+00:02:24.159 Adding to zip archive: assets/theming-D6WJLNoW.png
+00:02:24.159 Adding to zip archive: assets/theming-DyPUJx4L.js
+00:02:24.159 Adding to zip archive: iframe.html
+00:02:24.159 Adding to zip archive: index.html
+00:02:24.159 Adding to zip archive: index.json
+00:02:24.159 Adding to zip archive: project.json
+00:02:24.159 Adding to zip archive: sb-addons/docs-4/manager-bundle.js
+00:02:24.159 Finalizing zip archive
+00:02:24.271 Compression reduced upload size by 51%
+00:02:24.271 Uploading /.chromatic/storybook.zip (2.47 MB)
+00:02:24.273     → 3%
+00:02:24.612     → 11%
+00:02:24.769     → 13%
+00:02:25.080     → 16%
+00:02:25.239     → 19%
+00:02:25.396     → 21%
+00:02:25.541     → 27%
+00:02:25.850     → 32%
+00:02:26.007     → 40%
+00:02:26.162     → 45%
+00:02:26.319     → 50%
+00:02:26.473     → 56%
+00:02:26.625     → 61%
+00:02:26.775     → 66%
+00:02:26.943     → 74%
+00:02:27.093     → 80%
+00:02:27.244     → 85%
+00:02:27.389     → 90%
+00:02:27.559     → 98%
+00:02:28.197 Uploaded /.chromatic/storybook.zip (2.47 MB)
+00:02:28.198     → Finalizing upload
+00:02:28.198 Waiting for 'files-copied.3842070803.txt' sentinel file to appear at https://chromatic-builds.s3.us-west-2.amazonaws.com/6aaa16a7f29e25aff39f17b6-qrlkehpwki/.chromatic/files-copied.3842070803.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20260926%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260926T140224Z&X-Amz-Expires=1800&X-Amz-Signature=5329a98612fc5e28a883ba7071a5f2efc3529e4c59b7512d99dda40601d572b5&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject
+00:02:28.198 Waiting for 'zip-unpacked.txt' sentinel file to appear at https://chromatic-builds.s3.us-west-2.amazonaws.com/6aaa16a7f29e25aff39f17b6-qrlkehpwki/.chromatic/zip-unpacked.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20260926%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260926T140224Z&X-Amz-Expires=1980&X-Amz-Signature=0f4efa97c24123d7b2ce6ba133f16ccacd2fc18ff3042cb3ccca5905f9f4ad76&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject
+00:02:28.684 Sentinel file 'files-copied.3842070803.txt' OK.
+00:02:30.174 Sentinel file 'zip-unpacked.txt' OK.
+00:02:30.175 Publish complete in 7 seconds
+00:02:30.175     → Uploaded 56 files (2.47 MB), skipped 37 files
+00:02:30.176 Verifying your Storybook
+00:02:30.176     → This may take a few minutes
+00:02:36.103 ⚠ TurboSnap not available for your account
+             To ensure your project is fully setup and baselines are properly established,
+             TurboSnap is not available until at least 10 builds are created from CI.
+             
+             ℹ Review your TurboSnap availability on the Manage screen:
+             https://www.chromatic.com/manage?appId=6aaa16a7f29e25aff39f17b6
+00:02:36.104 ✔ Storybook published
+             We found 9 components with 50 stories.
+             ℹ View your Storybook at https://6aaa16a7f29e25aff39f17b6-qrlkehpwki.chromatic.com/
+00:02:36.105 Started build 6
+00:02:36.105     → View build details at https://www.chromatic.com/build?appId=6aaa16a7f29e25aff39f17b6&number=6
+00:02:36.105 Running 50 tests
+00:02:36.105     → This may take a few minutes
+00:02:36.106 ℹ Speed up Continuous Integration
+             Your project is linked to GitHub so Chromatic will report results there.
+             This means you can add the option `with: exitOnceUploaded: true` to your workflow to skip waiting for build results.
+             Read more here: https://www.chromatic.com/docs/configure/
+00:02:36.777 notify service handshake successful at wss://notify.chromatic.com/build/6ab7d06aa2e4257b3ca1521a
